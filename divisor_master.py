@@ -25,7 +25,6 @@ def factoriz(x):
     global prost_chislo
     ii = 0
     del_tmp = []
-    # kol_tmp = []
 
     while prost_chislo[ii] <= x:
         if x % prost_chislo[ii] == 0:
@@ -41,7 +40,7 @@ def factoriz(x):
 
     for i in range (len(del_tmp)):
         dict_chisla[del_tmp[i]] = del_tmp.count(del_tmp[i])
-    return #print('Форма числа ', dict_chisla)
+    return
 
 # Определение простоты числа
 def prostoe_chislo(x):
@@ -94,10 +93,7 @@ def max_delitel_chisla(x):
     factoriz(x)
 
     list_d = list(dict_chisla.keys())
-    #print('Лист до сортировки ',list_d)
     list_d.sort(key=lambda i: i, reverse=True)
-    #print('Лист после сортировки ',list_d)
-    #oft = list(list_d[0])
     return print('Наибольший простой делитель числа ', x,' :', list_d[0])
 
 # Kаноническое разложение числа
@@ -144,16 +140,3 @@ def naib_del_chisla(x):
     tmp1.sort(key=lambda i: i, reverse=True)
     print('Наибольший делитель числа ', x, ':',tmp1[0])
     return
-
-# n = int(input('Введите натуральное число от 1 до 1000  '))
-
-# factoriz(n)
-# prostoe_chislo(n)
-# print()
-# delitely_chisla(n)
-# print()
-# max_delitel_chisla(n)
-# print()
-# kanonich_vid(n)
-# print()
-# naib_del_chisla(n)
